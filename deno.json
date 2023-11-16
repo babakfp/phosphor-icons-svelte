@@ -1,0 +1,10 @@
+{
+    "tasks": {
+        "build": "deno run --allow-read --allow-write src/index.ts --build-optimized-svgs --build-component-svgs --build-components",
+        "build-with-svelte-package": "deno run --allow-read --allow-write src/index.ts --build-optimized-svgs --build-component-svgs && deno task build-svelte-package",
+        "build-optimized-svgs": "deno run --allow-read --allow-write src/index.ts --build-optimized-svgs",
+        "build-component-svgs": "deno run --allow-read --allow-write src/index.ts --build-component-svgs",
+        "build-components": "deno run --allow-read --allow-write src/index.ts --build-component-svgs --build-components",
+        "build-svelte-package": "cd sveltekit && pnpm i && pnpm package"
+    }
+}

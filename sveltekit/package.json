@@ -1,0 +1,39 @@
+{
+    "name": "sveltekit",
+    "version": "0.0.1",
+    "scripts": {
+        "dev": "vite dev",
+        "build": "vite build && npm run package",
+        "preview": "vite preview",
+        "package": "svelte-kit sync && svelte-package && publint",
+        "prepublishOnly": "npm run package",
+        "check": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json",
+        "check:watch": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json --watch"
+    },
+    "exports": {
+        ".": {
+            "types": "./dist/*.svelte.d.ts",
+            "svelte": "./dist/*.svelte"
+        }
+    },
+    "files": [
+        "dist",
+        "!dist/**/*.test.*",
+        "!dist/**/*.spec.*"
+    ],
+    "peerDependencies": {
+        "svelte": "^4.0.0"
+    },
+    "devDependencies": {
+        "@sveltejs/adapter-auto": "2.1.1",
+        "@sveltejs/kit": "1.27.6",
+        "@sveltejs/package": "2.2.2",
+        "publint": "0.2.5",
+        "svelte": "4.2.4",
+        "svelte-check": "3.6.0",
+        "tslib": "2.6.2",
+        "typescript": "5.2.2",
+        "vite": "5.0.0"
+    },
+    "type": "module"
+}

@@ -1,0 +1,5 @@
+core
+deno.lock
+optimized
+dist
+sveltekit/src/lib

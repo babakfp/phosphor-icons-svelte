@@ -1,0 +1,23 @@
+{
+    "deno.enable": true,
+    "[typescript]": {
+        // "editor.defaultFormatter": "denoland.vscode-deno"
+    },
+    "search.exclude": {
+        "core": true
+    },
+    // Hiding unnecessary files.
+    "files.exclude": {
+        "core/bin": true,
+        "core/meta": true,
+        "core/raw": true,
+        "core/src": true,
+        "core/.gitignore": true,
+        "core/.prettierrc": true,
+        "core/LICENSE": true,
+        "core/package.json": true,
+        "core/README.md": true,
+        "core/tsconfig.json": true,
+        "core/vite.config.ts": true
+    }
+}
