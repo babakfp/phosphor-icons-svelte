@@ -1,5 +1,4 @@
 core
 deno.lock
-optimized
-dist
-sveltekit/src/lib
+kit/src/lib
+package
