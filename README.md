@@ -85,7 +85,7 @@ These are the attributes that are added to the SVG element by default.
 
 #### `data-icon="icon-name"`
 
-You can use this, for example, to globally flip/mirror the icons for RTL sites.
+Use this to flip/mirror the icons when their normal orientation isn't accurate for RTL languages.
 
 ```css
 [dir="rtl"] [data-icon="icon-name"] {
@@ -93,7 +93,7 @@ You can use this, for example, to globally flip/mirror the icons for RTL sites.
 }
 ```
 
-#### `aria-hidden="true"`
+#### [`aria-hidden="true"`](https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-hidden)
 
 Icons are visual elements, nothing more. So, there is no reason to keep them visible to screen readers.
 
@@ -110,12 +110,12 @@ Exceptions: `data-icon`, `aria-hidden`, `xmlns`, `fill`, `viewBox`.
 ### Why did I build this?
 
 -   TypeScript support.
--   Accessibility in mind.
--   Enhanced performance and Developer Experience.
+-   Built with accessibility in mind.
+-   Improved performance and developer experience.
 
 ### Import syntax
 
-Syntax One:
+Syntax 1 (not valid):
 
 ```svelte
 <script>
@@ -126,7 +126,7 @@ Syntax One:
 <Heart weight="bold" />
 ```
 
-Syntax Two:
+Syntax 2:
 
 ```svelte
 <script>
@@ -138,12 +138,12 @@ Syntax Two:
 <IconHeartBold />
 ```
 
-Which one would you choose? I would choose the first one, however, there are some issues with that syntax!
+The first syntax looks nice, but there are some problems with it!
 
 [**Phosphor Icons**](https://phosphoricons.com) has more than 7K icons; This means when you import a single icon using the first syntax, you are actually loading them all! This results in slowing down your site's performance and loading time (during development) significantly (though it's not an issue in production)!
 
-What about combining all weights into a single component? Well, a similar issue happens in this case too. How it happens in both development and production environments!
+What about combining all weights into a single component? Well, a similar issue happens in this case too. This time it happens in both development and production environments!
 
-To tackle this, the library's API is designed to allow the individual importation of each component. This approach improves the developer experience (DX) and helps maintain better performance in development.
+To solve this, this library only allows importing the icons individually.
 
 What about the `Icon` prefix? The `Icon` prefix prevents naming collisions with other components.
