@@ -49,6 +49,8 @@ yarn add -D phosphor-icons-svelte
 
 ### Default Styles
 
+These are the styles that are applied to the SVG element by default.
+
 ```svelte
 <style>
     svg {
@@ -61,9 +63,39 @@ yarn add -D phosphor-icons-svelte
 </style>
 ```
 
+#### `pointer-events: none`
+
+Icons are visual elements, nothing more; So there is no reason to keep them interactable.
+
+#### `fill: currentColor`
+
+Inherit the text color of the parent element for consistent styling.
+
+#### `width: 1em` and `height: 1em`
+
+Inherit the text size of the parent element for scalability.
+
+#### `display: inline-block`
+
+Assists in various styling scenarios.
+
 ### Default Attributes
 
-Includes default attributes `data-icon="icon-name"` and `aria-hidden="true"`.
+These are the attributes that are added to the SVG element by default.
+
+#### `data-icon="icon-name"`
+
+You can use this, for example, to globally flip/mirror the icons for RTL sites.
+
+```css
+[dir="rtl"] [data-icon="icon-name"] {
+    transform: scaleX(-1);
+}
+```
+
+#### `aria-hidden="true"`
+
+Icons are visual elements, nothing more; So there is no reason to keep them visible to screen readers.
 
 ### Add Attributes/Props
 
@@ -115,37 +147,3 @@ What about combining all weights into a single component? Well, a similar issue 
 To tackle this, the library's API is designed to allow the individual importation of each component. This approach improves the developer experience (DX) and helps maintain better performance in development.
 
 What about the `Icon` prefix? The `Icon` prefix prevents naming collisions with other components.
-
-### Attributes
-
-#### `data-icon="<icon-name>"`
-
-You can use this, for example, to globally flip/mirror the icons for RTL sites.
-
-```css
-[dir="rtl"] [data-icon="<icon-name>"] {
-    transform: scaleX(-1);
-}
-```
-
-#### `aria-hidden="true"`
-
-Icons are visual elements, nothing more; So there is no reason to keep them visible to screen readers.
-
-### Styles
-
-#### `pointer-events: none`
-
-Icons are visual elements, nothing more; So there is no reason to keep them interactable.
-
-#### `fill: currentColor`
-
-Inherit the text color of the parent element for consistent styling.
-
-#### `width: 1em` and `height: 1em`
-
-Inherit the text size of the parent element for scalability.
-
-#### `display: inline-block`
-
-Assists in various styling scenarios.
