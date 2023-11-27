@@ -1,5 +1,6 @@
 {
     "tasks": {
+        "clone-core": "git submodule update --init",
         "build": "deno task build-components && deno task build-svelte && deno task build-package",
         "build-and-publish": "deno task build && deno task publish",
         "build-components": "deno run --allow-read --allow-write src/createComponents.ts",
