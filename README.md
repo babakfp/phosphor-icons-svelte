@@ -4,22 +4,8 @@
 
 ## Installation
 
-### NPM
-
-```
-npm i -D phosphor-icons-svelte
-```
-
-### PNPM
-
 ```
 pnpm add -D phosphor-icons-svelte
-```
-
-### Yarn
-
-```
-yarn add -D phosphor-icons-svelte
 ```
 
 ## Usage
