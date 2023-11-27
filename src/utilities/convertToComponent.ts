@@ -19,6 +19,8 @@ export const convertToComponent = async (svg: string, iconName: string) => {
     const attrs = `class={_class || undefined} data-phosphor-icon="${iconName}" aria-hidden="true"`
     const minStyle = await minify(style, { minifyCSS: true })
     const minScript = await minify(script, { minifyJS: true })
+    svg = svg.replace("<svg", `<svg ${attrs}`)
+    svg = svg.replace('fill="currentColor" ', "") // Removing this because it's redundant.
 
-    return minScript + svg.replace("<svg", `<svg ${attrs}`) + minStyle
+    return minScript + svg + minStyle
 }
