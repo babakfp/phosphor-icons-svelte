@@ -11,6 +11,7 @@ await emptyDir(PACKAGE_DIR)
 await copy(ICON_COMPONENTS_DIST_DIR, PACKAGE_DIST_DIR)
 await copy(Deno.cwd() + "/README.md", `${PACKAGE_DIR}/README.md`)
 await copy(Deno.cwd() + "/LICENSE", `${PACKAGE_DIR}/LICENSE`)
+await copy(ICON_COMPONENTS_DIR + "/CHANGELOG.md", `${PACKAGE_DIR}/CHANGELOG.md`)
 
 const packageJsonContent = await Deno.readTextFile(
     `${ICON_COMPONENTS_DIR}/package.json`
