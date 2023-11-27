@@ -1,6 +1,6 @@
 # 1.1.0
 
--   Renamed the `data-icon` attribute to `data-icon-phosphor`.
+-   Renamed the `data-icon` attribute to `data-phosphor-icon`.
 -   Improved and updated outdated docs.
 
 # 1.0.0
