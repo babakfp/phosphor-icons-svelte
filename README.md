@@ -97,13 +97,13 @@ Use this to flip/mirror the icons when their normal orientation isn't accurate f
 
 Icons are visual elements, nothing more. So, there is no reason to keep them visible to screen readers.
 
-### Add Attributes/Props
+### Props
+
+Only the `class` prop is supported.
 
 ```svelte
-<IconHeartRegular attribute="value" />
+<IconHeartRegular class="icon-heart-regular" />
 ```
-
-Exceptions: `data-icon`, `aria-hidden`, `xmlns`, `fill`, `viewBox`.
 
 ## FAQ
 
