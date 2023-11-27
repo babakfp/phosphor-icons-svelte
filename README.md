@@ -16,6 +16,12 @@ npm i -D phosphor-icons-svelte
 pnpm add -D phosphor-icons-svelte
 ```
 
+### Yarn
+
+```
+yarn add -D phosphor-icons-svelte
+```
+
 ## Usage
 
 ```svelte
