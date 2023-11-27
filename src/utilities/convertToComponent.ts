@@ -16,7 +16,7 @@ const style = `<style>
 </style>`
 
 export const convertToComponent = async (svg: string, iconName: string) => {
-    const attrs = `class={_class || undefined} data-icon="${iconName}" aria-hidden="true"`
+    const attrs = `class={_class || undefined} data-icon-phosphor="${iconName}" aria-hidden="true"`
     const minStyle = await minify(style, { minifyCSS: true })
     const minScript = await minify(script, { minifyJS: true })
 

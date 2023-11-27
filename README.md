@@ -83,12 +83,12 @@ Assists in various styling scenarios.
 
 These are the attributes that are added to the SVG element by default.
 
-#### `data-icon="icon-name"`
+#### `data-icon-phosphor="icon-name"`
 
 Use this to flip/mirror the icons when their normal orientation isn't accurate for RTL languages.
 
 ```css
-[dir="rtl"] [data-icon="icon-name"] {
+[dir="rtl"] [data-icon-phosphor="icon-name"] {
     transform: scaleX(-1);
 }
 ```
