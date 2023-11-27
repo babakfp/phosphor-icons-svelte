@@ -65,15 +65,15 @@ These are the styles that are applied to the SVG element by default.
 
 #### `pointer-events: none`
 
-Icons are visual elements, nothing more; So there is no reason to keep them interactable.
+Icons are visual elements, nothing more. So, there is no reason to keep them interactable. Using [`pointer-events: none`](https://developer.mozilla.org/en-US/docs/Web/CSS/pointer-events#none) on the icon will prevent all pointer interactions.
 
 #### `fill: currentColor`
 
-Inherit the text color of the parent element for consistent styling.
+By setting the icon's [`fill`](https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/fill) property to [`currentColor`](https://developer.mozilla.org/en-US/docs/Web/CSS/color_value#currentcolor_keyword), you inherit the value of the parent element's [`color`](https://developer.mozilla.org/en-US/docs/Web/CSS/color) property, effectively using it to color the icon.
 
 #### `width: 1em` and `height: 1em`
 
-Inherit the text size of the parent element for scalability.
+The CSS `em` sizing unit is relative to the value of the `font-size` property of the element. Meaning, if the set `font-size` to `20px`, the `width` and `height` of the icon will be `20px` too. If no `font-size` is set on the element, it will inherit the size from the parent element.
 
 #### `display: inline-block`
 
@@ -95,7 +95,7 @@ You can use this, for example, to globally flip/mirror the icons for RTL sites.
 
 #### `aria-hidden="true"`
 
-Icons are visual elements, nothing more; So there is no reason to keep them visible to screen readers.
+Icons are visual elements, nothing more. So, there is no reason to keep them visible to screen readers.
 
 ### Add Attributes/Props
 
