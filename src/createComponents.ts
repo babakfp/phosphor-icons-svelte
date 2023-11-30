@@ -5,8 +5,8 @@ import { pascalCase } from "https://deno.land/x/case@2.2.0/mod.ts"
 import { convertToComponent } from "./utilities/convertToComponent.ts"
 import { optimizeSvg } from "./utilities/optimizeSvg.ts"
 
-const LIBRARY_ICONS_DIR = `${Deno.cwd()}/core/assets`
-const COMPONENT_ICONS_DIR = `${Deno.cwd()}/kit/src/lib`
+const LIBRARY_ICONS_DIR = "./core/assets"
+const COMPONENT_ICONS_DIR = "./kit/src/lib"
 
 await emptyDir(COMPONENT_ICONS_DIR)
 

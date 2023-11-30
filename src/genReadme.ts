@@ -1,11 +1,11 @@
 import { upperFirstCase } from "https://deno.land/x/case@2.2.0/mod.ts"
 
-const LIBRARY_ICONS_DIR = `${Deno.cwd()}/core/assets`
+const LIBRARY_ICONS_DIR = "./core/assets"
 
 let iconsCount = 0
 const weights: string[] = []
 const coreVersion = JSON.parse(
-    await Deno.readTextFile(`${Deno.cwd()}/core/package.json`)
+    await Deno.readTextFile("./core/package.json")
 ).version
 
 for await (const { name: weight } of Deno.readDir(LIBRARY_ICONS_DIR)) {
