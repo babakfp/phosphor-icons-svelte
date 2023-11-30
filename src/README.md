@@ -14,27 +14,32 @@ pnpm add -D phosphor-icons-svelte
 
 ## Usage
 
+Icon `heart`:
+
 ```svelte
 <script>
     import IconHeartRegular from "phosphor-icons-svelte/IconHeartRegular.svelte"
-    import IconHeartBreakRegular from "phosphor-icons-svelte/IconHeartBreakRegular.svelte"
 </script>
 
 <IconHeartRegular />
-<IconHeartBreakRegular />
 ```
 
-### Weights
+Icon `heart-break`:
 
 ```svelte
 <script>
-    import IconHeartBold from "phosphor-icons-svelte/IconHeartBold.svelte"
-    import IconHeartDuotone from "phosphor-icons-svelte/IconHeartDuotone.svelte"
-    import IconHeartFill from "phosphor-icons-svelte/IconHeartFill.svelte"
-    import IconHeartLight from "phosphor-icons-svelte/IconHeartLight.svelte"
-    import IconHeartRegular from "phosphor-icons-svelte/IconHeartRegular.svelte"
-    import IconHeartThin from "phosphor-icons-svelte/IconHeartThin.svelte"
+    import IconHeartBreakRegular from "phosphor-icons-svelte/IconHeartBreakRegular.svelte"
 </script>
+
+<IconHeartBreakRegular />
+```
+
+### Props
+
+Only the `class` prop is supported.
+
+```svelte
+<IconHeartRegular class="icon-heart-regular" />
 ```
 
 ### Default styles
@@ -86,14 +91,6 @@ Use this to flip/mirror the icons when their normal orientation isn't accurate f
 #### [`aria-hidden="true"`](https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-hidden)
 
 Icons are visual elements, nothing more. So, there is no reason to keep them visible to screen readers.
-
-### Props
-
-Only the `class` prop is supported.
-
-```svelte
-<IconHeartRegular class="icon-heart-regular" />
-```
 
 ## FAQ
 
