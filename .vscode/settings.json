@@ -4,7 +4,7 @@
         // Exclude search results from the core folder.
         "core": true
     },
-    // Keep the explorer clean by only showing the SVG files.
+    // Keep the explorer clean by only showing the files that have been used.
     "files.exclude": {
         "core/bin": true,
         "core/meta": true,
@@ -13,7 +13,6 @@
         "core/.gitignore": true,
         "core/.prettierrc": true,
         "core/LICENSE": true,
-        "core/package.json": true,
         "core/README.md": true,
         "core/tsconfig.json": true,
         "core/vite.config.ts": true

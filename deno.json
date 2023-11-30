@@ -5,7 +5,8 @@
         "build-and-publish": "deno task build && deno task publish",
         "build-components": "deno run --allow-read --allow-write src/createComponents.ts",
         "build-svelte": "cd kit && pnpm i && pnpm package",
-        "build-package": "deno run --allow-read --allow-write src/createPackage.ts",
-        "publish": "cd package && npm publish"
+        "build-package": "deno task gen-readme && deno run --allow-read --allow-write src/createPackage.ts",
+        "publish": "cd package && npm publish",
+        "gen-readme": "deno run --allow-read --allow-write src/genReadme.ts"
     }
 }

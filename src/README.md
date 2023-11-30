@@ -1,12 +1,10 @@
-<!-- This file is auto-generated from ./src/README.md -->
-
 # Phosphor Icons Svelte
 
 **Phosphor Icons Svelte** is a set of components designed for utilizing [**Phosphor Icons**](https://phosphoricons.com) within the [**Svelte**](https://svelte.dev) framework.
 
--   Icons count: `1248` / per weight
--   Weights: `Bold` `Duotone` `Fill` `Light` `Regular` `Thin`
--   [Core](https://github.com/phosphor-icons/core) version: `2.0.2`
+-   Icons count: --iconsCount-- / per weight
+-   Weights: --weights--
+-   [Core](https://github.com/phosphor-icons/core) version: --coreVersion--
 
 ## Installation
 
