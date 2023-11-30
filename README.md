@@ -1,12 +1,17 @@
 <!-- This file is auto-generated from ./src/README.md -->
 
+<img src="https://github.com/phosphor-icons/core/raw/main/meta/phosphor-mark-tight-yellow.png" width="128" align="right" aria-hidden="true" pointer-events="none" />
+
 # Phosphor Icons Svelte
 
 **Phosphor Icons Svelte** is a set of components designed for utilizing [**Phosphor Icons**](https://phosphoricons.com) within the [**Svelte**](https://svelte.dev) framework.
 
 -   Icons count: `1248` / per weight
 -   Weights: `Bold` `Duotone` `Fill` `Light` `Regular` `Thin`
--   [Core](https://github.com/phosphor-icons/core) version: `2.0.2`
+-   Current [Core](https://github.com/phosphor-icons/core) version: `2.0.2`
+
+[![Package](https://img.shields.io/npm/v/phosphor-icons-svelte?style=for-the-badge&label=Package&color=%23cb0000)](https://www.npmjs.com/package/phosphor-icons-svelte)
+[![Core](https://img.shields.io/npm/v/%40phosphor-icons/core?style=for-the-badge&label=Core&color=%23ffd171)](https://www.npmjs.com/package/@phosphor-icons/core)
 
 ## Installation
 
@@ -16,27 +21,32 @@ pnpm add -D phosphor-icons-svelte
 
 ## Usage
 
+Icon `heart`:
+
 ```svelte
 <script>
     import IconHeartRegular from "phosphor-icons-svelte/IconHeartRegular.svelte"
-    import IconHeartBreakRegular from "phosphor-icons-svelte/IconHeartBreakRegular.svelte"
 </script>
 
 <IconHeartRegular />
-<IconHeartBreakRegular />
 ```
 
-### Weights
+Icon `heart-break`:
 
 ```svelte
 <script>
-    import IconHeartBold from "phosphor-icons-svelte/IconHeartBold.svelte"
-    import IconHeartDuotone from "phosphor-icons-svelte/IconHeartDuotone.svelte"
-    import IconHeartFill from "phosphor-icons-svelte/IconHeartFill.svelte"
-    import IconHeartLight from "phosphor-icons-svelte/IconHeartLight.svelte"
-    import IconHeartRegular from "phosphor-icons-svelte/IconHeartRegular.svelte"
-    import IconHeartThin from "phosphor-icons-svelte/IconHeartThin.svelte"
+    import IconHeartBreakRegular from "phosphor-icons-svelte/IconHeartBreakRegular.svelte"
 </script>
+
+<IconHeartBreakRegular />
+```
+
+### Props
+
+Only the `class` prop is supported.
+
+```svelte
+<IconHeartRegular class="icon-heart-regular" />
 ```
 
 ### Default styles
@@ -88,14 +98,6 @@ Use this to flip/mirror the icons when their normal orientation isn't accurate f
 #### [`aria-hidden="true"`](https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-hidden)
 
 Icons are visual elements, nothing more. So, there is no reason to keep them visible to screen readers.
-
-### Props
-
-Only the `class` prop is supported.
-
-```svelte
-<IconHeartRegular class="icon-heart-regular" />
-```
 
 ## FAQ
 

@@ -1,10 +1,15 @@
+<img src="https://github.com/phosphor-icons/core/raw/main/meta/phosphor-mark-tight-yellow.png" width="128" align="right" aria-hidden="true" pointer-events="none" />
+
 # Phosphor Icons Svelte
 
 **Phosphor Icons Svelte** is a set of components designed for utilizing [**Phosphor Icons**](https://phosphoricons.com) within the [**Svelte**](https://svelte.dev) framework.
 
 -   Icons count: --iconsCount-- / per weight
 -   Weights: --weights--
--   [Core](https://github.com/phosphor-icons/core) version: --coreVersion--
+-   Current [Core](https://github.com/phosphor-icons/core) version: --coreVersion--
+
+[![Package](https://img.shields.io/npm/v/phosphor-icons-svelte?style=for-the-badge&label=Package&color=%23cb0000)](https://www.npmjs.com/package/phosphor-icons-svelte)
+[![Core](https://img.shields.io/npm/v/%40phosphor-icons/core?style=for-the-badge&label=Core&color=%23ffd171)](https://www.npmjs.com/package/@phosphor-icons/core)
 
 ## Installation
 
