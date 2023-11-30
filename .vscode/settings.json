@@ -16,5 +16,12 @@
         "core/README.md": true,
         "core/tsconfig.json": true,
         "core/vite.config.ts": true
+    },
+    "files.readonlyInclude": {
+        "deno.lock": true,
+        "core": true,
+        "kit/src/lib": true,
+        "package": true,
+        "README.md": true
     }
 }

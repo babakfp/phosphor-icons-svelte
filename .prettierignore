@@ -1,4 +1,5 @@
-core
 deno.lock
+
+core
 kit/src/lib
 package
