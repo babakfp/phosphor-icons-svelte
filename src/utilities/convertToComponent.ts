@@ -16,11 +16,12 @@ const style = `<style>
 </style>`
 
 export const convertToComponent = async (svg: string, iconName: string) => {
+    svg = svg.replace('fill="currentColor" ', "") // Removing this because it's redundant.
     const attrs = `class={_class || undefined} data-phosphor-icon="${iconName}" aria-hidden="true"`
+    svg = svg.replace("<svg", `<svg ${attrs}`)
+
     const minStyle = await minify(style, { minifyCSS: true })
     const minScript = await minify(script, { minifyJS: true })
-    svg = svg.replace("<svg", `<svg ${attrs}`)
-    svg = svg.replace('fill="currentColor" ', "") // Removing this because it's redundant.
 
     return minScript + svg + minStyle
 }
