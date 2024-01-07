@@ -21,24 +21,20 @@ pnpm add -D phosphor-icons-svelte
 
 ## Usage
 
-Icon `heart`:
-
 ```svelte
 <script>
+    // heart (Regular)
     import IconHeartRegular from "phosphor-icons-svelte/IconHeartRegular.svelte"
+
+    // heart-break (Bold)
+    import IconHeartBreakBold from "phosphor-icons-svelte/IconHeartBreakBold.svelte"
 </script>
 
+<!-- heart (Regular) -->
 <IconHeartRegular />
-```
 
-Icon `heart-break`:
-
-```svelte
-<script>
-    import IconHeartBreakRegular from "phosphor-icons-svelte/IconHeartBreakRegular.svelte"
-</script>
-
-<IconHeartBreakRegular />
+<!-- heart-break (Bold) -->
+<IconHeartBreakBold />
 ```
 
 ### Props
