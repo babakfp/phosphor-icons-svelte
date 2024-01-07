@@ -6,9 +6,9 @@
 
 -   Icons count: --iconsCount-- / per weight
 -   Weights: --weights--
--   Current [Core](https://github.com/phosphor-icons/core) version: --coreVersion--
+-   Latest [Core](https://github.com/phosphor-icons/core) version: --coreVersion--
 
-[![Package](https://img.shields.io/npm/v/phosphor-icons-svelte?style=for-the-badge&label=Package&color=%23cb0000)](https://www.npmjs.com/package/phosphor-icons-svelte)
+[![NPM](https://img.shields.io/npm/v/phosphor-icons-svelte?style=for-the-badge&label=NPM&color=%23cb0000)](https://www.npmjs.com/package/phosphor-icons-svelte)
 [![Core](https://img.shields.io/npm/v/%40phosphor-icons/core?style=for-the-badge&label=Core&color=%23ffd171)](https://www.npmjs.com/package/@phosphor-icons/core)
 
 ## Installation
