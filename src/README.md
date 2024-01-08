@@ -1,4 +1,4 @@
-<img src="https://github.com/phosphor-icons/core/raw/main/meta/phosphor-mark-tight-yellow.png" width="128" align="right" aria-hidden="true" pointer-events="none" />
+<img src="https://github.com/phosphor-icons/core/raw/main/meta/phosphor-mark-tight-yellow.png" width="128" align="right" />
 
 # Phosphor Icons Svelte
 
