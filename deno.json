@@ -8,5 +8,12 @@
         "build-package": "deno task gen-readme && deno run --allow-read --allow-write src/createPackage.ts",
         "publish": "cd package && npm publish",
         "gen-readme": "deno run --allow-read --allow-write src/genReadme.ts"
+    },
+    "imports": {
+        "html-minifier-terser": "npm:html-minifier-terser@7.2.0",
+        "svgo": "npm:svgo@3.2.0",
+        "log-update": "npm:log-update@6.0.0",
+        "std/": "https://deno.land/std@0.211.0/",
+        "case": "https://deno.land/x/case@2.2.0/mod.ts"
     }
 }

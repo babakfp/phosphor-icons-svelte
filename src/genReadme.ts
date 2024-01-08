@@ -1,4 +1,4 @@
-import { upperFirstCase } from "https://deno.land/x/case@2.2.0/mod.ts"
+import { upperFirstCase } from "case"
 
 const LIBRARY_ICONS_DIR = "./core/assets"
 

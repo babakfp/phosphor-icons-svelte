@@ -1,7 +1,7 @@
-import logUpdate from "npm:log-update"
-import { bold, blue, green } from "https://deno.land/std@0.123.0/fmt/colors.ts"
-import { emptyDir } from "https://deno.land/std@0.206.0/fs/mod.ts"
-import { pascalCase } from "https://deno.land/x/case@2.2.0/mod.ts"
+import logUpdate from "log-update"
+import { bold, blue, green } from "std/fmt/colors.ts"
+import { emptyDir } from "std/fs/mod.ts"
+import { pascalCase } from "case"
 import { convertToComponent } from "./utilities/convertToComponent.ts"
 import { optimizeSvg } from "./utilities/optimizeSvg.ts"
 

@@ -1,5 +1,5 @@
-import { copy } from "https://deno.land/std@0.208.0/fs/copy.ts"
-import { emptyDir } from "https://deno.land/std@0.206.0/fs/mod.ts"
+import { copy } from "std/fs/copy.ts"
+import { emptyDir } from "std/fs/mod.ts"
 
 const ICON_COMPONENTS_DIR = "./kit"
 const ICON_COMPONENTS_DIST_DIR = `${ICON_COMPONENTS_DIR}/dist`

@@ -1,4 +1,4 @@
-import { minify } from "npm:html-minifier-terser"
+import { minify } from "html-minifier-terser"
 
 const script = `<script lang="ts">
     export let _class = ""
