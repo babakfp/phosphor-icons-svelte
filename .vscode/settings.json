@@ -18,6 +18,7 @@
         "core/tsconfig.json": true,
         "core/vite.config.ts": true
     },
+    // Prevent accidentally editing these files.
     "files.readonlyInclude": {
         "deno.lock": true,
         "core": true,
