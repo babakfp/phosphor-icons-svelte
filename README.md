@@ -8,7 +8,7 @@
 
 -   Icons count: `1248` / per weight
 -   Weights: `Bold` `Duotone` `Fill` `Light` `Regular` `Thin`
--   Current [Core](https://github.com/phosphor-icons/core) version: `2.0.3`
+-   Current [Core](https://github.com/phosphor-icons/core) version: `2.0.8`
 
 [![NPM](https://img.shields.io/npm/v/phosphor-icons-svelte?style=for-the-badge&label=NPM&color=%23cb0000)](https://www.npmjs.com/package/phosphor-icons-svelte "View on NPM")
 [![Core](https://img.shields.io/npm/v/%40phosphor-icons/core?style=for-the-badge&label=Core&color=%23ffd171)](https://www.npmjs.com/package/@phosphor-icons/core "Latest version - View on NPM")
