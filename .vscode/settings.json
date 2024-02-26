@@ -7,13 +7,17 @@
     },
     // Keep the explorer clean by only showing the files that have been used.
     "files.exclude": {
-        "core/bin": true,
+        "core/.github": true,
         "core/meta": true,
         "core/raw": true,
+        "core/scripts": true,
         "core/src": true,
         "core/.gitignore": true,
         "core/.prettierrc": true,
+        "core/CONTRIBUTING.md": true,
         "core/LICENSE": true,
+        "core/package.json": true,
+        "core/pnpm-lock.yaml": true,
         "core/README.md": true,
         "core/tsconfig.json": true,
         "core/vite.config.ts": true
