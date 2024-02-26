@@ -1,4 +1,3 @@
-deno.lock
-
-kit/src/lib
-package
+/deno.lock
+/kit/src/lib/
+/package/
