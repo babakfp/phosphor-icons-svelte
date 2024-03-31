@@ -6,12 +6,15 @@
 
 **Phosphor Icons Svelte** is a set of components designed for utilizing [**Phosphor Icons**](https://phosphoricons.com) within the [**Svelte**](https://svelte.dev) framework.
 
--   Icons count: `1248` / per weight
+-   Icons count: `1512` / per weight
 -   Weights: `Bold` `Duotone` `Fill` `Light` `Regular` `Thin`
--   Current [Core](https://github.com/phosphor-icons/core) version: `2.0.8`
+-   Supported [Core](https://github.com/phosphor-icons/core) version: `2.1.1`
 
 [![NPM](https://img.shields.io/npm/v/phosphor-icons-svelte?style=for-the-badge&label=NPM&color=%23cb0000)](https://www.npmjs.com/package/phosphor-icons-svelte "View on NPM")
-[![Core](https://img.shields.io/npm/v/%40phosphor-icons/core?style=for-the-badge&label=Core&color=%23ffd171)](https://www.npmjs.com/package/@phosphor-icons/core "Latest version - View on NPM")
+[![Core](https://img.shields.io/npm/v/%40phosphor-icons/core?style=for-the-badge&label=Latest%20Core&color=%23ffd171)](https://www.npmjs.com/package/@phosphor-icons/core "Latest version - View on NPM")
+
+> [!NOTE]
+> If the Supported version and the latest Core version shown in the README do not match, and this library is not up-to-date, please create an issue and notify me.
 
 ## Installation
 
