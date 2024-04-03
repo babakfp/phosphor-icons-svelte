@@ -14,7 +14,7 @@
 [![Core](https://img.shields.io/npm/v/%40phosphor-icons/core?style=for-the-badge&label=Latest%20Core&color=%23ffd171)](https://www.npmjs.com/package/@phosphor-icons/core "Latest version - View on NPM")
 
 > [!NOTE]
-> If the Supported version and the latest Core version shown in the README do not match, and this library is not up-to-date, please create an issue and notify me.
+> If the supported and the latest Core versions shown in the README didn't match, and this library wasn't up-to-date, please create an issue and let me know.
 
 ## Installation
 
