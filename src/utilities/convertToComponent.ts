@@ -1,8 +1,7 @@
 import { minify } from "html-minifier-terser"
 
 const script = `<script lang="ts">
-    export let class_ = ""
-    export { class_ as class }
+    let { class: class_ }: { class?: string } = $props()
 </script>`
 
 const style = `<style>
