@@ -1,6 +1,6 @@
 {
     "name": "phosphor-icons-svelte",
-    "version": "1.2.0",
+    "version": "2.0.0",
     "description": "A component library for Phosphor Icons made to be used in Svelte.",
     "license": "MIT",
     "repository": "github:babakfp/phosphor-icons-svelte",
