@@ -1,3 +1,7 @@
+## 2.0.0
+
+-   [breaking] Updated to Svelte 5.
+
 ## 1.1.2
 
 -   Optimized output by removing redundant `fill="currentColor"` style.
