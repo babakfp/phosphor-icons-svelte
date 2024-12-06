@@ -1,3 +1,7 @@
+## 2.0.2
+
+Update to this version from `2.0.1`.
+
 ## 2.0.1
 
 - Moved the CSS properties from the `style` tag to the SVG tag to improve the
