@@ -1,3 +1,8 @@
+## 2.0.1
+
+- Moved the CSS properties from the `style` tag to the SVG tag to improve the
+  performance and CSS specificity.
+
 ## 2.0.0
 
 - [breaking] Updated to Svelte 5.
