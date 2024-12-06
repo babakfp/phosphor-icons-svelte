@@ -2,20 +2,26 @@
 
 # Phosphor Icons Svelte
 
-**Phosphor Icons Svelte** is a set of components designed for utilizing [**Phosphor Icons**](https://phosphoricons.com) within the [**Svelte**](https://svelte.dev) framework.
+**Phosphor Icons Svelte** is a set of components designed for utilizing
+[**Phosphor Icons**](https://phosphoricons.com) within the
+[**Svelte**](https://svelte.dev) framework.
 
--   Icons count: --iconsCount-- / per weight
--   Weights: --weights--
--   Supported [Core](https://github.com/phosphor-icons/core) version: --coreVersion--
+- Icons count: --iconsCount-- / per weight
+- Weights: --weights--
+- Supported [Core](https://github.com/phosphor-icons/core) version:
+  --coreVersion--
 
 [![NPM](https://img.shields.io/npm/v/phosphor-icons-svelte?style=for-the-badge&label=NPM&color=%23cb0000)](https://www.npmjs.com/package/phosphor-icons-svelte "View on NPM")
 [![Core](https://img.shields.io/npm/v/%40phosphor-icons/core?style=for-the-badge&label=Latest%20Core&color=%23ffd171)](https://www.npmjs.com/package/@phosphor-icons/core "Latest version - View on NPM")
 
 > [!IMPORTANT]
-> The latest version of this package is not compatible with Svelte 4. Please use the version `1.1.2` for Svelte 4 compatibility.
+> The latest version of this package is not compatible with Svelte 4. Please use
+> the version `1.1.2` for Svelte 4 compatibility.
 
 > [!NOTE]
-> If the supported and the latest Core versions shown in the README didn't match, and this library wasn't up-to-date, please create an issue and let me know.
+> If the supported and the latest Core versions shown in the README didn't
+> match, and this library wasn't up-to-date, please create an issue and let me
+> know.
 
 ## Installation
 
@@ -69,15 +75,24 @@ The following are the default styles applied to all of the SVG elements.
 
 #### `width: 1em` and `height: 1em`
 
-The CSS `em` unit is relative to the `font-size` of the element (`2em` means 2 times the size of the current font size).
+The CSS `em` unit is relative to the `font-size` of the element (`2em` means 2
+times the size of the current font size).
 
 #### `fill: currentColor`
 
-By setting the [`fill`](https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/fill) property to [`currentColor`](https://developer.mozilla.org/en-US/docs/Web/CSS/color_value#currentcolor_keyword), you inherit its value from [`color`](https://developer.mozilla.org/en-US/docs/Web/CSS/color) property.
+By setting the
+[`fill`](https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/fill)
+property to
+[`currentColor`](https://developer.mozilla.org/en-US/docs/Web/CSS/color_value#currentcolor_keyword),
+you inherit its value from
+[`color`](https://developer.mozilla.org/en-US/docs/Web/CSS/color) property.
 
 #### `pointer-events: none`
 
-Icons are visual elements, nothing more. So, there is no reason to keep them interactable. Using [`pointer-events: none`](https://developer.mozilla.org/en-US/docs/Web/CSS/pointer-events#none) on the icon will prevent all pointer interactions.
+Icons are visual elements, nothing more. So, there is no reason to keep them
+interactable. Using
+[`pointer-events: none`](https://developer.mozilla.org/en-US/docs/Web/CSS/pointer-events#none)
+on the icon will prevent all pointer interactions.
 
 #### `display: inline-block`
 
@@ -89,7 +104,8 @@ The following are the default attributes added to all of the SVG elements.
 
 #### `data-phosphor-icon="icon-name"`
 
-Use this to flip/mirror the icons when their normal orientation isn't accurate for RTL languages.
+Use this to flip/mirror the icons when their normal orientation isn't accurate
+for RTL languages.
 
 ```css
 [dir="rtl"] [data-phosphor-icon="heart"] {
@@ -99,15 +115,16 @@ Use this to flip/mirror the icons when their normal orientation isn't accurate f
 
 #### [`aria-hidden="true"`](https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-hidden)
 
-Icons are visual elements, nothing more. So, there is no reason to keep them visible to screen readers.
+Icons are visual elements, nothing more. So, there is no reason to keep them
+visible to screen readers.
 
 ## FAQ
 
 ### Why did I build this?
 
--   TypeScript support.
--   Built with accessibility in mind.
--   Improved performance and developer experience.
+- TypeScript support.
+- Built with accessibility in mind.
+- Improved performance and developer experience.
 
 ### Why syntax is ugly?
 
@@ -136,8 +153,16 @@ Syntax 2 - Ugly syntax:
 <IconHeartBreakBold />
 ```
 
-The first syntax looks nice, but there are some problems with it! [**Phosphor Icons**](https://phosphoricons.com) has more than 7K icons; This means when a single icon is imported (using the first syntax), in reality, all of the icons are being imported! This slows down your site's performance and loading time significantly (only during development). To solve this issue, this library only allows importing the icons individually.
+The first syntax looks nice, but there are some problems with it!
+[**Phosphor Icons**](https://phosphoricons.com) has more than 7K icons; This
+means when a single icon is imported (using the first syntax), in reality, all
+of the icons are being imported! This slows down your site's performance and
+loading time significantly (only during development). To solve this issue, this
+library only allows importing the icons individually.
 
-What about combining all weights into a single component? Well, a similar issue happens in this case too. This time it happens in both development and production environments!
+What about combining all weights into a single component? Well, a similar issue
+happens in this case too. This time it happens in both development and
+production environments!
 
-What about the `Icon` prefix? The `Icon` prefix prevents naming collisions with other components.
+What about the `Icon` prefix? The `Icon` prefix prevents naming collisions with
+other components.

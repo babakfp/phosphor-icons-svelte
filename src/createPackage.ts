@@ -13,7 +13,7 @@ await copy("./LICENSE", `${PACKAGE_DIR}/LICENSE`)
 await copy(ICON_COMPONENTS_DIR + "/CHANGELOG.md", `${PACKAGE_DIR}/CHANGELOG.md`)
 
 const packageJsonContent = await Deno.readTextFile(
-    `${ICON_COMPONENTS_DIR}/package.json`
+    `${ICON_COMPONENTS_DIR}/package.json`,
 )
 
 const packageJsonObject = JSON.parse(packageJsonContent)
@@ -22,5 +22,5 @@ delete packageJsonObject.devDependencies
 
 await Deno.writeTextFile(
     `${PACKAGE_DIR}/package.json`,
-    JSON.stringify(packageJsonObject, null, 4)
+    JSON.stringify(packageJsonObject, null, 4),
 )

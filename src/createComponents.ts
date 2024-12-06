@@ -1,5 +1,5 @@
 import logUpdate from "log-update"
-import { bold, blue, green } from "@std/fmt/colors"
+import { blue, bold, green } from "@std/fmt/colors"
 import { emptyDir } from "@std/fs"
 import { pascalCase } from "case"
 import { convertToComponent } from "./utilities/convertToComponent.ts"
@@ -11,20 +11,22 @@ const COMPONENT_ICONS_DIR = "./kit/src/lib"
 await emptyDir(COMPONENT_ICONS_DIR)
 
 for await (const { name: weight } of Deno.readDir(LIBRARY_ICONS_DIR)) {
-    for await (const { name: file } of Deno.readDir(
-        `${LIBRARY_ICONS_DIR}/${weight}`
-    )) {
+    for await (
+        const { name: file } of Deno.readDir(
+            `${LIBRARY_ICONS_DIR}/${weight}`,
+        )
+    ) {
         const iconName = file.slice(0, -4).replace(`-${weight}`, "")
         const componentName = `Icon${pascalCase(`${iconName}-${weight}`)}`
         const componentFileName = `${componentName}.svelte`
 
         const iconContent = await Deno.readTextFile(
-            `${LIBRARY_ICONS_DIR}/${weight}/${file}`
+            `${LIBRARY_ICONS_DIR}/${weight}/${file}`,
         )
 
         await Deno.writeTextFile(
             `${COMPONENT_ICONS_DIR}/${componentFileName}`,
-            await convertToComponent(optimizeSvg(iconContent), iconName)
+            await convertToComponent(optimizeSvg(iconContent), iconName),
         )
 
         logUpdate(`Generating: ${bold(blue(componentFileName))}`)

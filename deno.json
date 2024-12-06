@@ -16,5 +16,10 @@
         "svgo": "npm:svgo@3.3.2",
         "log-update": "npm:log-update@6.1.0",
         "case": "https://deno.land/x/case@2.2.0/mod.ts"
+    },
+    "fmt": {
+        "semiColons": false,
+        "indentWidth": 4,
+        "exclude": ["deno.lock", "core", "kit/src/lib", "package"]
     }
 }
