@@ -10,10 +10,11 @@
         "publish": "cd package && pnpm publish"
     },
     "imports": {
+        "@std/fmt": "jsr:@std/fmt@^1.0.3",
+        "@std/fs": "jsr:@std/fs@^1.0.6",
         "html-minifier-terser": "npm:html-minifier-terser@7.2.0",
         "svgo": "npm:svgo@3.3.2",
         "log-update": "npm:log-update@6.1.0",
-        "std/": "https://deno.land/std@0.217.0/",
         "case": "https://deno.land/x/case@2.2.0/mod.ts"
     }
 }

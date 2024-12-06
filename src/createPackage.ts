@@ -1,5 +1,4 @@
-import { copy } from "std/fs/copy.ts"
-import { emptyDir } from "std/fs/mod.ts"
+import { copy, emptyDir } from "@std/fs"
 
 const ICON_COMPONENTS_DIR = "./kit"
 const ICON_COMPONENTS_DIST_DIR = `${ICON_COMPONENTS_DIR}/dist`

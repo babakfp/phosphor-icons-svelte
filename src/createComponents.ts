@@ -1,6 +1,6 @@
 import logUpdate from "log-update"
-import { bold, blue, green } from "std/fmt/colors.ts"
-import { emptyDir } from "std/fs/mod.ts"
+import { bold, blue, green } from "@std/fmt/colors"
+import { emptyDir } from "@std/fs"
 import { pascalCase } from "case"
 import { convertToComponent } from "./utilities/convertToComponent.ts"
 import { optimizeSvg } from "./utilities/optimizeSvg.ts"
