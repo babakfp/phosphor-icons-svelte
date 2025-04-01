@@ -27,13 +27,13 @@
         "svelte": ">= 5"
     },
     "devDependencies": {
-        "@sveltejs/adapter-auto": "3.3.0",
-        "@sveltejs/kit": "2.7.2",
-        "@sveltejs/package": "2.3.6",
-        "@sveltejs/vite-plugin-svelte": "4.0.0",
-        "svelte": "5.1.2",
-        "typescript": "5.6.3",
-        "vite": "5.4.10"
+        "@sveltejs/adapter-auto": "4.0.0",
+        "@sveltejs/kit": "2.18.0",
+        "@sveltejs/package": "2.3.10",
+        "@sveltejs/vite-plugin-svelte": "5.0.3",
+        "svelte": "5.23.0",
+        "typescript": "5.8.2",
+        "vite": "6.2.3"
     },
     "type": "module"
 }
