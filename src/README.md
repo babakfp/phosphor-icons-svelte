@@ -15,8 +15,12 @@
 [![Core](https://img.shields.io/npm/v/%40phosphor-icons/core?style=for-the-badge&label=Latest%20Core&color=%23ffd171)](https://www.npmjs.com/package/@phosphor-icons/core "Latest version - View on NPM")
 
 > [!IMPORTANT]
-> The latest version of this package is not compatible with Svelte 4. Please use
-> the version `1.1.2` for Svelte 4 compatibility.
+> This package now targets newer versions of Svelte and no longer supports
+> Svelte 4 or below. If you're using an older version, install `1.1.2` instead.
+>
+> ```cmd
+> pnpm add -D phosphor-icons-svelte@1.1.2
+> ```
 
 > [!NOTE]
 > If the supported and the latest Core versions shown in the README didn't

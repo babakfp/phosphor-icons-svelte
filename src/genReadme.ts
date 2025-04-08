@@ -23,7 +23,7 @@ const readmeContent = `<!-- This file is auto-generated from ./src/README.md -->
         .replace("--iconsCount--", "`" + iconsCount + "`")
         .replace(
             "--weights--",
-            weights.map((w) => "`" + upperFirstCase(w) + "`").join(" "),
+            weights.map((w) => "`" + upperFirstCase(w) + "`").join(", ") + '.',
         )
         .replace("--coreVersion--", "`" + coreVersion + "`")
 
