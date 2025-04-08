@@ -13,8 +13,10 @@
         "prepublishOnly": "pnpm run package"
     },
     "exports": {
-        "types": "./dist/*.svelte.d.ts",
-        "svelte": "./dist/*.svelte"
+        ".": {
+            "types": "./dist/*.svelte.d.ts",
+            "svelte": "./dist/*.svelte"
+        }
     },
     "files": [
         "dist"
