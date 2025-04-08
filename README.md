@@ -65,26 +65,22 @@ Only a single prop (`class`) is supported for styling purposes.
 
 ### Default styles
 
-The following are the default styles applied to all of the SVG elements.
+The following are the default attributes added to all of the SVG elements.
 
-```svelte
-<style>
-    svg {
-        width: 1em;
-        height: 1em;
-        fill: currentColor;
-        pointer-events: none;
-        display: inline-block;
-    }
-</style>
+```
+width="1em"
+height="1em"
+fill="currentColor"
+pointer-events="none"
+display="inline-block"
 ```
 
-#### `width: 1em` and `height: 1em`
+#### `width="1em"` and `height="1em"`
 
 The CSS `em` unit is relative to the `font-size` of the element (`2em` means 2
 times the size of the current font size).
 
-#### `fill: currentColor`
+#### `fill="currentColor"`
 
 By setting the
 [`fill`](https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/fill)
@@ -93,14 +89,14 @@ property to
 you inherit its value from
 [`color`](https://developer.mozilla.org/en-US/docs/Web/CSS/color) property.
 
-#### `pointer-events: none`
+#### `pointer-events="none"`
 
 Icons are visual elements, nothing more. So, there is no reason to keep them
 interactable. Using
 [`pointer-events: none`](https://developer.mozilla.org/en-US/docs/Web/CSS/pointer-events#none)
 on the icon will prevent all pointer interactions.
 
-#### `display: inline-block`
+#### `display="inline-block"`
 
 Helps in various styling scenarios.
 
@@ -136,7 +132,7 @@ visible to screen readers.
 
 Let's say we have the following two syntaxes:
 
-Syntax 1 (NOT VALID) - Good looking syntax:
+**Pretty syntax** (invalid):
 
 ```svelte
 <script>
@@ -147,7 +143,7 @@ Syntax 1 (NOT VALID) - Good looking syntax:
 <HeartBreak weight="bold" />
 ```
 
-Syntax 2 - Ugly syntax:
+**Ugly syntax**:
 
 ```svelte
 <script>
@@ -168,7 +164,8 @@ library only allows importing the icons individually.
 
 What about combining all weights into a single component? Well, a similar issue
 happens in this case too. This time it happens in both development and
-production environments!
+production environments! This doesn't happen always, sometimes tooling allows
+removing the parts the we don't need in build time.
 
 What about the `Icon` prefix? The `Icon` prefix prevents naming collisions with
 other components.
