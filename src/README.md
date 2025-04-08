@@ -6,12 +6,12 @@
 [**Phosphor Icons**](https://phosphoricons.com) within the
 [**Svelte**](https://svelte.dev) framework.
 
-- **--iconsCount--** icons per weight, and **--iconsTotalCount--** in total.
-- **--weightsLength--** weights: --weights--
+- **{{{iconsPerWeight}}}** icons per weight, and **{{{iconsTotal}}}** in total.
+- **{{{weightsCount}}}** weights: {{{weightNames}}}
 
 > [!NOTE]
 > The latest release is based on
-> [`@phosphor-icons/core@--coreVersion--`](https://github.com/phosphor-icons/core).
+> [`@phosphor-icons/core@{{{coreVersion}}}`](https://github.com/phosphor-icons/core).
 > If the versions didn't match, please feel free to create open an.
 
 ## Installation
@@ -32,17 +32,11 @@ pnpm add -D phosphor-icons-svelte
 
 ```svelte
 <script>
-    // heart (Regular)
     import IconHeartRegular from "phosphor-icons-svelte/IconHeartRegular.svelte"
-
-    // heart-break (Bold)
     import IconHeartBreakBold from "phosphor-icons-svelte/IconHeartBreakBold.svelte"
 </script>
 
-<!-- heart (Regular) -->
 <IconHeartRegular />
-
-<!-- heart-break (Bold) -->
 <IconHeartBreakBold />
 ```
 
@@ -149,9 +143,9 @@ Let's say we have the following two syntaxes:
 ```
 
 The first syntax looks nice, but there are some problems with it!
-[**Phosphor Icons**](https://phosphoricons.com) has --iconsTotalCount-- icons;
-This means when a single icon is imported (using the first syntax), in reality,
-all of the icons are being imported! This slows down your site's performance and
+[**Phosphor Icons**](https://phosphoricons.com) has {{{iconsTotal}}} icons; This
+means when a single icon is imported (using the first syntax), in reality, all
+of the icons are being imported! This slows down your site's performance and
 loading time significantly (only during development). To solve this issue, this
 library only allows importing the icons individually.
 
