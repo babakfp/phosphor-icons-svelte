@@ -6,7 +6,7 @@
 [**Phosphor Icons**](https://phosphoricons.com) within the
 [**Svelte**](https://svelte.dev) framework.
 
-- Icons count: --iconsCount-- / per weight
+- Icons count: --iconsCount-- / per weight, total --iconsTotalCount--
 - Weights: --weights--
 - Supported [Core](https://github.com/phosphor-icons/core) version:
   --coreVersion--
@@ -154,9 +154,9 @@ Let's say we have the following two syntaxes:
 ```
 
 The first syntax looks nice, but there are some problems with it!
-[**Phosphor Icons**](https://phosphoricons.com) has more than 7K icons; This
-means when a single icon is imported (using the first syntax), in reality, all
-of the icons are being imported! This slows down your site's performance and
+[**Phosphor Icons**](https://phosphoricons.com) has --iconsTotalCount-- icons;
+This means when a single icon is imported (using the first syntax), in reality,
+all of the icons are being imported! This slows down your site's performance and
 loading time significantly (only during development). To solve this issue, this
 library only allows importing the icons individually.
 
