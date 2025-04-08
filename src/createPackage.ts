@@ -20,6 +20,17 @@ const packageJsonObject = JSON.parse(packageJsonContent)
 delete packageJsonObject.scripts
 delete packageJsonObject.devDependencies
 
+const componentEntries = await Deno.readDir(
+    `${ICON_COMPONENTS_DIR}/src/lib`,
+)
+packageJsonObject.exports = {}
+for await (const entry of componentEntries) {
+    packageJsonObject.exports[`./${entry.name}`] = {
+        "svelte": `./dist/${entry.name}`,
+        "types": `./dist/${entry.name}.d.ts`,
+    }
+}
+
 await Deno.writeTextFile(
     `${PACKAGE_DIR}/package.json`,
     JSON.stringify(packageJsonObject, null, 4),
