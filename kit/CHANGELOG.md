@@ -1,3 +1,7 @@
+## 2.0.3
+
+- fix: path intellisense not including `.svelte` in import path.
+
 ## 2.0.2
 
 Update to this version from `2.0.1`.
