@@ -2,17 +2,18 @@
 
 <img src="https://github.com/phosphor-icons/homepage/raw/master/.github/logo.png" width="128" align="right" />
 
-**Phosphor Icons Svelte** is a set of components designed for utilizing
-[**Phosphor Icons**](https://phosphoricons.com) within the
+**Phosphor Icons Svelte** is a collection of components designed to integrate
+[**Phosphor Icons**](https://phosphoricons.com) into the
 [**Svelte**](https://svelte.dev) framework.
 
-- **{{{iconsPerWeight}}}** icons per weight, and **{{{iconsTotal}}}** in total.
+- **{{{iconsPerWeight}}}** icons per weight, and **{{{iconsTotal}}}** icons in
+  total.
 - **{{{weightsCount}}}** weights: {{{weightNames}}}
 
 > [!NOTE]
 > The latest release is based on
 > [`@phosphor-icons/core@{{{coreVersion}}}`](https://github.com/phosphor-icons/core).
-> If the versions didn't match, please feel free to create open an.
+> If the versions don't match, feel free to open an issue.
 
 ## Installation
 
@@ -21,8 +22,8 @@ pnpm add -D phosphor-icons-svelte
 ```
 
 > [!IMPORTANT]
-> This package now targets newer versions of Svelte and no longer supports
-> Svelte 4 or below. If you're using an older version, install `1.1.2` instead.
+> This package targets newer versions of Svelte and no longer supports Svelte 4
+> or earlier. If you're using an older version, install `1.1.2` instead.
 >
 > ```
 > pnpm add -D phosphor-icons-svelte@1.1.2
@@ -42,7 +43,7 @@ pnpm add -D phosphor-icons-svelte
 
 ### Props
 
-Only a single prop (`class`) is supported for styling purposes.
+Only the `class` prop is available for styling.
 
 #### `class`
 
@@ -50,9 +51,9 @@ Only a single prop (`class`) is supported for styling purposes.
 <IconHeartRegular class="icon-heart-regular" />
 ```
 
-### Default styles
+### Default Styles
 
-The following are the default attributes added to all of the SVG elements.
+Here are the default attributes applied to all SVG elements.
 
 ```
 width="1em"
@@ -64,37 +65,36 @@ display="inline-block"
 
 #### `width="1em"` and `height="1em"`
 
-The CSS `em` unit is relative to the `font-size` of the element (`2em` means 2
-times the size of the current font size).
+The `em` unit in CSS is relative to the element's `font-size` (e.g., `2em` is
+twice the size of the current font size).
 
 #### `fill="currentColor"`
 
-By setting the
+Setting the
 [`fill`](https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/fill)
 property to
-[`currentColor`](https://developer.mozilla.org/en-US/docs/Web/CSS/color_value#currentcolor_keyword),
-you inherit its value from
+[`currentColor`](https://developer.mozilla.org/en-US/docs/Web/CSS/color_value#currentcolor_keyword)
+inherits its value from the
 [`color`](https://developer.mozilla.org/en-US/docs/Web/CSS/color) property.
 
 #### `pointer-events="none"`
 
-Icons are visual elements, nothing more. So, there is no reason to keep them
-interactable. Using
+Since icons are purely visual, there's no need to make them interactive. The
 [`pointer-events: none`](https://developer.mozilla.org/en-US/docs/Web/CSS/pointer-events#none)
-on the icon will prevent all pointer interactions.
+property prevents any pointer interactions.
 
 #### `display="inline-block"`
 
-Helps in various styling scenarios.
+This helps in various styling scenarios.
 
-### Default attributes
+### Default Attributes
 
-The following are the default attributes added to all of the SVG elements.
+Here are the default attributes applied to all SVG elements.
 
 #### `data-phosphor-icon="icon-name"`
 
-Use this to flip/mirror the icons when their normal orientation isn't accurate
-for RTL languages.
+This attribute is used to flip/mirror icons when their default orientation isn't
+suitable for RTL languages.
 
 ```css
 [dir="rtl"] [data-phosphor-icon="heart"] {
@@ -104,20 +104,19 @@ for RTL languages.
 
 #### [`aria-hidden="true"`](https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-hidden)
 
-Icons are visual elements, nothing more. So, there is no reason to keep them
-visible to screen readers.
+Icons are visual elements, so they don't need to be visible to screen readers.
 
 ## FAQ
 
-### Why did I build this?
+### Why was this built?
 
 - TypeScript support.
-- Built with accessibility in mind.
+- Accessibility considerations.
 - Improved performance and developer experience.
 
-### Why syntax is ugly?
+### Why is the syntax considered ugly?
 
-Let's say we have the following two syntaxes:
+Consider the following two syntaxes:
 
 **Pretty syntax** (invalid):
 
@@ -142,20 +141,20 @@ Let's say we have the following two syntaxes:
 <IconHeartBreakBold />
 ```
 
-The first syntax looks nice, but there are some problems with it!
-[**Phosphor Icons**](https://phosphoricons.com) has {{{iconsTotal}}} icons; This
-means when a single icon is imported (using the first syntax), in reality, all
-of the icons are being imported! This slows down your site's performance and
-loading time significantly (only during development). To solve this issue, this
-library only allows importing the icons individually.
+The first syntax may seem appealing, but it causes issues!
+[**Phosphor Icons**](https://phosphoricons.com) includes a total of
+{{{iconsTotal}}} icons; importing just one icon (using the first syntax) results
+in all icons being imported. This can significantly slow down your site's
+performance and loading time during development. To address this, this library
+restricts you to importing icons individually.
 
-What about combining all weights into a single component? Well, a similar issue
-happens in this case too. This time it happens in both development and
-production environments! This doesn't happen always, sometimes tooling allows
-removing the parts the we don't need in build time.
+What about combining all weights into a single component? This can cause a
+similar issue, affecting both development and production environments!
+Sometimes, tooling can remove unnecessary parts at build time, but this is not
+always guaranteed.
 
-What about the `Icon` prefix? The `Icon` prefix prevents naming collisions with
-other components.
+What about the `Icon` prefix? The `Icon` prefix helps avoid naming collisions
+with other components.
 
 ## CHANGELOG
 
