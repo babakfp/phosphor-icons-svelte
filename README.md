@@ -24,7 +24,7 @@
 
 ## Installation
 
-```cmd
+```
 pnpm add -D phosphor-icons-svelte
 ```
 
@@ -32,7 +32,7 @@ pnpm add -D phosphor-icons-svelte
 > This package now targets newer versions of Svelte and no longer supports
 > Svelte 4 or below. If you're using an older version, install `1.1.2` instead.
 >
-> ```cmd
+> ```
 > pnpm add -D phosphor-icons-svelte@1.1.2
 > ```
 
