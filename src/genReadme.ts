@@ -4,7 +4,7 @@ const LIBRARY_ICONS_DIR = "./core/assets"
 
 let iconsCount = 0
 const weights: string[] = []
-const coreVersion = JSON.parse(
+const coreVersion: string = JSON.parse(
     await Deno.readTextFile("./core/package.json"),
 ).version
 
@@ -22,12 +22,20 @@ const readmeContent = `<!-- This file is auto-generated from ./src/README.md -->
 
 ` +
     (await Deno.readTextFile("./src/README.md"))
-        .replace("--iconsCount--", "`" + iconsCount + "`")
-        .replaceAll("--iconsTotalCount--", String(iconsTotalCount))
+        .replace(
+            "--iconsCount--",
+            new Intl.NumberFormat().format(iconsCount),
+        )
+        .replaceAll(
+            "--iconsTotalCount--",
+            new Intl.NumberFormat().format(iconsTotalCount),
+        )
         .replace(
             "--weights--",
-            weights.map((w) => "`" + upperFirstCase(w) + "`").join(", ") + ".",
+            weights.map((w) => "**" + upperFirstCase(w) + "**").join(", ") +
+                ".",
         )
-        .replace("--coreVersion--", "`" + coreVersion + "`")
+        .replace("--weightsLength--", String(weights.length))
+        .replace("--coreVersion--", coreVersion)
 
 Deno.writeTextFile(`./README.md`, readmeContent)

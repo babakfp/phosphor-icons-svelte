@@ -8,17 +8,13 @@
 [**Phosphor Icons**](https://phosphoricons.com) within the
 [**Svelte**](https://svelte.dev) framework.
 
-- Icons count: `1512` / per weight, total 9072
-- Weights: `Bold`, `Duotone`, `Fill`, `Light`, `Regular`, `Thin`.
-- Used [Core](https://github.com/phosphor-icons/core) version: `2.1.1`
-- [CHANGELOG](/kit/CHANGELOG.md)
-
-[![NPM](https://img.shields.io/npm/v/phosphor-icons-svelte?style=for-the-badge&label=NPM&color=%23cb0000)](https://www.npmjs.com/package/phosphor-icons-svelte "View on NPM")
-[![Core](https://img.shields.io/npm/v/%40phosphor-icons/core?style=for-the-badge&label=Latest%20Core&color=%23ffd171)](https://www.npmjs.com/package/@phosphor-icons/core "Latest version - View on NPM")
+- **1,512** icons per weight, and **9,072** in total.
+- **6** weights: **Bold**, **Duotone**, **Fill**, **Light**, **Regular**, **Thin**.
 
 > [!NOTE]
-> If the used and the latest Core versions didn't match, and this library wasn't
-> up-to-date, please create an issue and let me know.
+> The latest release is based on
+> [`@phosphor-icons/core@2.1.1`](https://github.com/phosphor-icons/core).
+> If the versions didn't match, please feel free to create open an.
 
 ## Installation
 
@@ -155,7 +151,7 @@ Let's say we have the following two syntaxes:
 ```
 
 The first syntax looks nice, but there are some problems with it!
-[**Phosphor Icons**](https://phosphoricons.com) has 9072 icons;
+[**Phosphor Icons**](https://phosphoricons.com) has 9,072 icons;
 This means when a single icon is imported (using the first syntax), in reality,
 all of the icons are being imported! This slows down your site's performance and
 loading time significantly (only during development). To solve this issue, this
@@ -168,3 +164,7 @@ removing the parts the we don't need in build time.
 
 What about the `Icon` prefix? The `Icon` prefix prevents naming collisions with
 other components.
+
+## CHANGELOG
+
+[/kit/CHANGELOG.md](/kit/CHANGELOG.md).

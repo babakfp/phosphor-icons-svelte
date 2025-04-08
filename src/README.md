@@ -6,17 +6,13 @@
 [**Phosphor Icons**](https://phosphoricons.com) within the
 [**Svelte**](https://svelte.dev) framework.
 
-- Icons count: --iconsCount-- / per weight, total --iconsTotalCount--
-- Weights: --weights--
-- Used [Core](https://github.com/phosphor-icons/core) version: --coreVersion--
-- [CHANGELOG](/kit/CHANGELOG.md)
-
-[![NPM](https://img.shields.io/npm/v/phosphor-icons-svelte?style=for-the-badge&label=NPM&color=%23cb0000)](https://www.npmjs.com/package/phosphor-icons-svelte "View on NPM")
-[![Core](https://img.shields.io/npm/v/%40phosphor-icons/core?style=for-the-badge&label=Latest%20Core&color=%23ffd171)](https://www.npmjs.com/package/@phosphor-icons/core "Latest version - View on NPM")
+- **--iconsCount--** icons per weight, and **--iconsTotalCount--** in total.
+- **--weightsLength--** weights: --weights--
 
 > [!NOTE]
-> If the used and the latest Core versions didn't match, and this library wasn't
-> up-to-date, please create an issue and let me know.
+> The latest release is based on
+> [`@phosphor-icons/core@--coreVersion--`](https://github.com/phosphor-icons/core).
+> If the versions didn't match, please feel free to create open an.
 
 ## Installation
 
@@ -166,3 +162,7 @@ removing the parts the we don't need in build time.
 
 What about the `Icon` prefix? The `Icon` prefix prevents naming collisions with
 other components.
+
+## CHANGELOG
+
+[/kit/CHANGELOG.md](/kit/CHANGELOG.md).
