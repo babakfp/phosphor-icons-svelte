@@ -1,8 +1,8 @@
 <!-- This file is auto-generated from ./src/README.md -->
 
-<img src="https://github.com/phosphor-icons/homepage/raw/master/.github/logo.png" width="128" align="right" />
-
 # Phosphor Icons Svelte
+
+<img src="https://github.com/phosphor-icons/homepage/raw/master/.github/logo.png" width="128" align="right" />
 
 **Phosphor Icons Svelte** is a set of components designed for utilizing
 [**Phosphor Icons**](https://phosphoricons.com) within the
