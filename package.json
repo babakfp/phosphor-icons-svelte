@@ -1,12 +1,11 @@
 {
     "scripts": {
-        "build": "pnpm build:lib && pnpm build:dist && pnpm build:package",
-        "build:lib": "node ./src/createComponents.ts",
-        "build:dist": "cd kit && pnpm i && pnpm package",
-        "build:package": "pnpm build:readme && node ./src/createPackage.ts",
-        "build:readme": "node ./src/genReadme.ts",
-        "build-publish": "pnpm build && pnpm publish",
-        "publish": "cd package && pnpm publish",
+        "build": "pnpm build-components && pnpm build-dist && pnpm build-package",
+        "build-components": "node ./src/build-components.ts",
+        "build-dist": "cd kit && pnpm i && pnpm package",
+        "build-package": "pnpm update-readme && node ./src/dist-to-package.ts",
+        "update-readme": "node ./src/update-readme.ts",
+        "publish": "pnpm build && cd package && pnpm publish",
         "format": "prettier -w ."
     },
     "devDependencies": {
