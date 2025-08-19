@@ -1,42 +1,36 @@
-import { upperFirstCase } from "case"
+import fs from "node:fs/promises"
+import Case from "case"
 
-const LIBRARY_ICONS_DIR = "./core/assets"
+const LIBRARY_ICONS_DIR = "./node_modules/@phosphor-icons/core/assets"
 
-let iconsPerWeight = 0
-const weights: string[] = []
+const weights = await fs.readdir(LIBRARY_ICONS_DIR)
+const iconsPerWeight = (await fs.readdir(`${LIBRARY_ICONS_DIR}/${weights[0]}`))
+    .length
 const coreVersion: string = JSON.parse(
-    await Deno.readTextFile("./core/package.json"),
+    await fs.readFile(
+        "./node_modules/@phosphor-icons/core/package.json",
+        "utf8",
+    ),
 ).version
 
-for await (const { name: weight } of Deno.readDir(LIBRARY_ICONS_DIR)) {
-    weights.push(weight)
-}
+const readmeContent =
+    `<!-- This file is auto-generated from ./src/README.md -->
 
-for await (const _ of Deno.readDir(`${LIBRARY_ICONS_DIR}/${weights[0]}`)) {
-    iconsPerWeight += 1
-}
-
-const readmeContent = `<!-- This file is auto-generated from ./src/README.md -->
-
-` +
-    (await Deno.readTextFile("./src/README.md"))
+`
+    + (await fs.readFile("./src/README.md", "utf8"))
         .replace(
             "{{{iconsPerWeight}}}",
             new Intl.NumberFormat().format(iconsPerWeight),
         )
         .replaceAll(
             "{{{iconsTotal}}}",
-            new Intl.NumberFormat().format(
-                iconsPerWeight * weights.length,
-            ),
+            new Intl.NumberFormat().format(iconsPerWeight * weights.length),
         )
         .replace(
             "{{{weightNames}}}",
-            `${
-                weights.map((w) => "**" + upperFirstCase(w) + "**").join(", ")
-            }.`,
+            `${weights.map((w) => "**" + Case.header(w) + "**").join(", ")}.`,
         )
         .replace("{{{weightsCount}}}", String(weights.length))
         .replace("{{{coreVersion}}}", coreVersion)
 
-Deno.writeTextFile(`./README.md`, readmeContent)
+await fs.writeFile("./README.md", readmeContent)

@@ -1,36 +1,39 @@
+import fs from "node:fs/promises"
+import util from "node:util"
+import Case from "case"
 import logUpdate from "log-update"
-import { blue, bold, green } from "@std/fmt/colors"
-import { emptyDir } from "@std/fs"
-import { pascalCase } from "case"
 import { convertToComponent } from "./utilities/convertToComponent.ts"
 import { optimizeSvg } from "./utilities/optimizeSvg.ts"
 
-const LIBRARY_ICONS_DIR = "./core/assets"
+const LIBRARY_ICONS_DIR = "./node_modules/@phosphor-icons/core/assets"
 const COMPONENT_ICONS_DIR = "./kit/src/lib"
 
-await emptyDir(COMPONENT_ICONS_DIR)
+await fs.rm(COMPONENT_ICONS_DIR, { recursive: true, force: true })
+await fs.mkdir(COMPONENT_ICONS_DIR, { recursive: true })
 
-for await (const { name: weight } of Deno.readDir(LIBRARY_ICONS_DIR)) {
-    for await (
-        const { name: file } of Deno.readDir(
-            `${LIBRARY_ICONS_DIR}/${weight}`,
-        )
-    ) {
+for (const weight of await fs.readdir(LIBRARY_ICONS_DIR)) {
+    for (const file of await fs.readdir(`${LIBRARY_ICONS_DIR}/${weight}`)) {
         const iconName = file.slice(0, -4).replace(`-${weight}`, "")
-        const componentName = `Icon${pascalCase(`${iconName}-${weight}`)}`
+        const componentName = `Icon${Case.pascal(`${iconName}-${weight}`)}`
         const componentFileName = `${componentName}.svelte`
 
-        const iconContent = await Deno.readTextFile(
+        const iconContent = await fs.readFile(
             `${LIBRARY_ICONS_DIR}/${weight}/${file}`,
+            "utf8",
         )
 
-        await Deno.writeTextFile(
+        await fs.writeFile(
             `${COMPONENT_ICONS_DIR}/${componentFileName}`,
             await convertToComponent(optimizeSvg(iconContent), iconName),
         )
 
-        logUpdate(`Generating: ${bold(blue(componentFileName))}`)
+        logUpdate(
+            util.styleText(
+                ["bold", "blue"],
+                `Generating: ${componentFileName}`,
+            ),
+        )
     }
 }
 
-logUpdate(bold(green("Done!")))
+logUpdate(util.styleText(["bold", "green"], "Done!"))
