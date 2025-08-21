@@ -3,7 +3,7 @@
         "build": "pnpm build-components && pnpm build-dist && pnpm build-package",
         "build-components": "node ./src/build-components.ts",
         "build-dist": "cd kit && pnpm i && pnpm package",
-        "build-package": "pnpm update-readme && node ./src/dist-to-package.ts",
+        "build-package": "pnpm update-readme && node ./src/build-package.ts",
         "update-readme": "node ./src/update-readme.ts",
         "publish": "pnpm build && cd package && pnpm publish",
         "format": "prettier -w ."
