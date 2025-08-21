@@ -1,4 +1,4 @@
-<!-- This file is auto-generated from ./src/README.md -->
+<!-- This file is auto-generated from ./README-ORIGINAL.md -->
 
 # Phosphor Icons Svelte
 

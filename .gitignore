@@ -1,4 +1,8 @@
+.DS_Store
 /node_modules/
-/deno.lock
 /kit/src/lib/
 /package/
+
+/kit/dist/
+/kit/.svelte-kit/
+/kit/vite.config.ts.timestamp-*

@@ -1,10 +1,10 @@
 {
     "scripts": {
         "build": "pnpm build-components && pnpm build-dist && pnpm build-package",
-        "build-components": "node ./src/build-components.ts",
+        "build-components": "node ./bin/build-components.ts",
         "build-dist": "cd kit && pnpm i && pnpm package",
-        "build-package": "pnpm update-readme && node ./src/build-package.ts",
-        "update-readme": "node ./src/update-readme.ts",
+        "build-package": "pnpm update-readme && node ./bin/build-package.ts",
+        "update-readme": "node ./bin/update-readme.ts",
         "publish": "pnpm build && cd package && pnpm publish",
         "format": "prettier -w ."
     },

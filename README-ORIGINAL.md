@@ -15,7 +15,7 @@
 > [`@phosphor-icons/core@{{{coreVersion}}}`](https://github.com/phosphor-icons/core).
 > If the versions don't match, feel free to open an issue.
 
-## Installation
+## Install
 
 ```
 pnpm add -D phosphor-icons-svelte
@@ -29,7 +29,7 @@ pnpm add -D phosphor-icons-svelte
 > pnpm add -D phosphor-icons-svelte@1.1.2
 > ```
 
-## Usage
+## Example
 
 ```svelte
 <script>
