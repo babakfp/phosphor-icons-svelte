@@ -14,10 +14,10 @@ const coreVersion: string = JSON.parse(
 ).version
 
 const readmeContent =
-    `<!-- This file is auto-generated from ./src/README-ORIGINAL.md -->
+    `<!-- This file is auto-generated from ./README-ORIGINAL.md -->
 
 `
-    + (await fs.readFile("./src/README-ORIGINAL.md", "utf8"))
+    + (await fs.readFile("./README-ORIGINAL.md", "utf8"))
         .replace(
             "{{{iconsPerWeight}}}",
             new Intl.NumberFormat().format(iconsPerWeight),
