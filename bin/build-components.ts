@@ -4,7 +4,9 @@ import { minify } from "html-minifier-terser"
 import logUpdate from "log-update"
 import { optimize } from "svgo"
 
-const COMPONENT_SCRIPT = `<script lang="ts">const p: { class?: string } = $props()</script>`
+const COMPONENT_SCRIPT = `<script lang="ts">
+import { type ClassValue } from "svelte/elements"
+const p: { class?: ClassValue } = $props()</script>`
 export const svgToComponent = async (svg: string, iconName: string) => {
     const attrs = `{...p} data-phosphor-icon="${iconName}" aria-hidden="true" width="1em" height="1em" pointer-events="none" display="inline-block"`
     svg = svg.replace("<svg", `<svg ${attrs}`)
