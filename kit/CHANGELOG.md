@@ -1,3 +1,7 @@
+## 2.1.0
+
+- feat: use `ClassValue` for `class` attribute type instead of `string`.
+
 ## 2.0.9
 
 - fix: path intellisense not including `.svelte` in import path.
