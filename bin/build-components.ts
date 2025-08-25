@@ -1,6 +1,5 @@
 import fs from "node:fs/promises"
 import Case from "case"
-import { minify } from "html-minifier-terser"
 import logUpdate from "log-update"
 import { optimize } from "svgo"
 
@@ -10,10 +9,7 @@ const p: { class?: ClassValue } = $props()</script>`
 export const svgToComponent = async (svg: string, iconName: string) => {
     const attrs = `{...p} data-phosphor-icon="${iconName}" aria-hidden="true" width="1em" height="1em" pointer-events="none" display="inline-block"`
     svg = svg.replace("<svg", `<svg ${attrs}`)
-
-    const minScript = await minify(COMPONENT_SCRIPT, { minifyJS: true })
-
-    return minScript + svg
+    return COMPONENT_SCRIPT + svg
 }
 
 const LIBRARY_ICONS_DIR = "./node_modules/@phosphor-icons/core/assets"

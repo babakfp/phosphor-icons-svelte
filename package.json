@@ -13,7 +13,6 @@
         "@phosphor-icons/core": "2.1.1",
         "@types/node": "24.3.0",
         "case": "1.6.3",
-        "html-minifier-terser": "7.2.0",
         "log-update": "6.1.0",
         "prettier": "3.6.2",
         "svgo": "4.0.0"
