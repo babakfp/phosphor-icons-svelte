@@ -4,12 +4,13 @@ import logUpdate from "log-update"
 import { optimize } from "svgo"
 
 const COMPONENT_SCRIPT = `<script lang="ts">
-import { type ClassValue } from "svelte/elements"
-const p: { class?: ClassValue } = $props()</script>`
+    import { type ClassValue } from "svelte/elements"
+    const p: { class?: ClassValue } = $props()
+</script>`
 export const svgToComponent = async (svg: string, iconName: string) => {
     const attrs = `{...p} data-phosphor-icon="${iconName}" aria-hidden="true" width="1em" height="1em" pointer-events="none" display="inline-block"`
     svg = svg.replace("<svg", `<svg ${attrs}`)
-    return COMPONENT_SCRIPT + svg
+    return [COMPONENT_SCRIPT, svg].join("\n")
 }
 
 const LIBRARY_ICONS_DIR = "./node_modules/@phosphor-icons/core/assets"
